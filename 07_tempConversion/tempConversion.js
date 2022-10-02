@@ -1,16 +1,21 @@
 const ftoc = function (degree) {
+  let converted = 0;
   if (degree === 32) {
     return 0;
   } else {
-    return ((degree - 32) / 1.8).toFixed(1);
+    converted = ((degree - 32) / 1.8).toFixed(1);
+    return +converted;
   }
 };
 
 const ctof = function (degree) {
+  let converted = 0;
+
   if (degree === 0) {
     return 32;
   } else {
-    return ((degree * 1.8) + 32).toFixed(1);
+    converted = ((degree * 1.8) + 32).toFixed(1);
+    return +converted;
   }
 };
 
